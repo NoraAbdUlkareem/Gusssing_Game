@@ -1,13 +1,18 @@
 secret_word='Noran'
+guess=''
 guess_limit=5
 guess_count=0
+out_of_guesses=False
 
-while guess_count<guess_limit:
-    guess=input("Enter Guess : ")
-    if secret_word == guess:
-        print("You Won!")
-        break 
-    guess_count +=1
+while guess!=secret_word and not out_of_guesses:
+    if guess_count<guess_limit:
+        guess=input("Enter Guess : ")
+        guess_count +=1
+    else:
+        out_of_guesses=True
 
-if guess_count==guess_limit:
+if out_of_guesses:
     print("You Lost")
+
+else:
+    print("You Won!")
