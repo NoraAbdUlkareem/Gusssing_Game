@@ -1,7 +1,13 @@
 secret_word='Noran'
-guess=''
+guess_limit=5
+guess_count=0
 
-while guess != secret_word:
+while guess_count<guess_limit:
     guess=input("Enter Guess : ")
+    if secret_word == guess:
+        print("You Won!")
+        break 
+    guess_count +=1
 
-print('You Won!')
+if guess_count==guess_limit:
+    print("You Lost")
