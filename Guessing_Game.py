@@ -1,7 +1,7 @@
 secret_word='Noran'
+guess=''
 
-while True:
+while guess != secret_word:
     guess=input("Enter Guess : ")
-    if secret_word == guess:
-        print("You Won!")
-        break
+
+print('You Won!')
